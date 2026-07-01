@@ -9,6 +9,10 @@
 .dashboard-page {
   background: radial-gradient(circle at top left, rgba(0, 44, 95, 0.12), transparent 35%),
               linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+              
+  /* Adicione esta linha abaixo para forçar a tipografia moderna */
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
 }
 
 .navbar-glass {
@@ -141,4 +145,105 @@
 .table th {
   font-size: 0.78rem;
   letter-spacing: 0.5px;
+}
+/* --- ESTILOS DO MENU E ÍCONES (Padrão Home) --- */
+.menu-icon {
+  height: 26px;
+  width: auto;
+  filter: invert(1) brightness(2);
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  opacity: 0.8;
+}
+
+.menu-icon:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.logout-icon {
+  height: 26px; 
+  width: auto;
+  filter: invert(1) brightness(2); 
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  opacity: 0.8;
+}
+
+.logout-icon:hover {
+  transform: scale(1.1) translateX(2px);
+  opacity: 1;
+}
+
+/* --- SIDEBAR E OVERLAY --- */
+.sidebar-menu {
+  width: 320px;
+  background: linear-gradient(145deg, #001a38 0%, #0a1122 100%);
+  transform: translateX(-100%); 
+  transition: transform 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+  z-index: 1050 !important; 
+}
+
+.sidebar-menu.active {
+  transform: translateX(0);
+}
+
+/* --- OVERLAY ANIMADO (Padrão Home) --- */
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s ease, visibility 0.35s ease;
+  z-index: 1040;
+}
+
+.sidebar-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* --- BOTÃO FECHAR ANIMADO --- */
+.btn-fechar {
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.btn-fechar:hover {
+  transform: rotate(90deg);
+  color: #ffffff !important;
+}
+
+/* --- ITENS DO MENU E HOVER --- */
+.custom-menu-item {
+  background-color: transparent;
+  border: 1px solid transparent;
+  transition: background-color 0.25s ease, padding-left 0.3s ease, border-color 0.25s ease;
+}
+
+.custom-menu-item:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+  padding-left: 1.5rem !important; 
+}
+
+/* Mantém o Dashboard destacado quando estiver nele */
+.active-menu-item {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Garantir que o azul da Home funcione aqui também */
+.text-primary {
+  color: #4da6ff !important; 
+}
+/* Padroniza os títulos para um visual mais limpo */
+.dashboard-page h1, 
+.dashboard-page h2, 
+.dashboard-page h4, 
+.dashboard-page h5 {
+  font-family: inherit;
+  letter-spacing: -0.5px; /* Deixa as letras sutilmente mais unidas, traço comum em designs modernos */
 }

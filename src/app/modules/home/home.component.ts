@@ -39,4 +39,17 @@ export class HomeComponent implements OnInit {
     this.authService.logout();
     this.router.navigate(['/login']);
   }
+  menuAberto: boolean = false;
+
+  // Função para abrir/fechar o menu
+  toggleMenu() {
+    this.menuAberto = !this.menuAberto;
+  }
+
+  // Função para redirecionar para a Home e fechar o menu
+  irParaHome() {
+    this.menuAberto = false;
+    // Se precisar forçar a navegação para a home, use o Router:
+    // this.router.navigate(['/home']);
+  }
 }

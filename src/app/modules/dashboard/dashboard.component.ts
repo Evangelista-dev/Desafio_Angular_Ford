@@ -29,7 +29,12 @@ export class DashboardComponent implements OnInit {
   // VARIÁVEIS NOVAS PARA ARMAZENAR OS DADOS DO VIN DA API
   telemetriaVin: any = null;
   erroPesquisa: string | null = null;
+// VARIÁVEIS DO MENU
+  menuAberto: boolean = false;
 
+  toggleMenu(): void {
+    this.menuAberto = !this.menuAberto;
+  }
   constructor(
     private vehicleService: VehicleService,
     private authService: AuthService,

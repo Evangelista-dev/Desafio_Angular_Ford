@@ -1,0 +1,144 @@
+.bg-ford {
+  background-color: #002C5F !important;
+}
+
+.text-ford {
+  color: #002C5F !important;
+}
+
+.dashboard-page {
+  background: radial-gradient(circle at top left, rgba(0, 44, 95, 0.12), transparent 35%),
+              linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+}
+
+.navbar-glass {
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 44, 95, 0.92) !important;
+}
+
+.tracking-wider {
+  letter-spacing: 0.8px;
+}
+
+.metric-card {
+  border-radius: 18px;
+  border: 1px solid rgba(0, 44, 95, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+  background: rgba(255, 255, 255, 0.96);
+}
+
+.metric-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+  background: #ffffff;
+}
+
+.image-banner {
+  max-height: 380px;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.hero-panel {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(0, 44, 95, 0.08);
+  background: rgba(255, 255, 255, 0.92);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.hero-panel:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.12);
+}
+
+.hero-panel:hover .image-banner {
+  transform: scale(1.02);
+}
+
+.search-input-group .form-control,
+.search-input-group .input-group-text {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+}
+
+.search-input-group .form-control:focus,
+.search-input-group .form-control:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  background-color: #ffffff;
+}
+
+.records-card {
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.telemetry-card {
+  animation: fadeInUp 0.6s ease;
+}
+
+.table {
+  min-width: 680px;
+}
+
+.table th {
+  font-size: 0.78rem;
+  letter-spacing: 0.6px;
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba(0, 44, 95, 0.04);
+  transform: translateX(4px);
+}
+
+.table-hover tbody tr {
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.badge {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.badge:hover {
+  transform: translateY(-1px);
+}
+
+.card .card-header h5 {
+  letter-spacing: 0.5px;
+}
+
+.form-select,
+.form-control {
+  border-radius: 14px;
+}
+
+.form-select:focus,
+.form-control:focus {
+  border-color: #002C5F;
+  box-shadow: 0 0 0 0.15rem rgba(0, 44, 95, 0.15);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.font-monospace {
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.transition-row {
+  transition: background-color 0.15s ease;
+}
+
+.table th {
+  font-size: 0.78rem;
+  letter-spacing: 0.5px;
+}

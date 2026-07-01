@@ -1,0 +1,76 @@
+<div class="container-fluid login-wrapper overflow-hidden p-0">
+  <div class="row g-0 min-vh-100">
+    
+    <div class="col-md-6 col-lg-7 d-none d-md-block position-relative login-image-panel">
+      <div class="image-mask"></div>
+      <img src="img/ranger.png" alt="img-ranger-background">
+      <div class="login-image-copy position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-4">
+
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-5 d-flex align-items-center justify-content-center bg-white px-4 py-5">
+      <div class="login-card w-100" style="max-width: 420px;">
+
+        <div class="text-center mb-4">
+          <img src="img/ford.png" alt="Ford Logo" class="img-logo-superior mb-3">
+          <h2 class="welcome-text mt-3">Boas-vindas</h2>
+          <p class="text-muted small mt-2">Faça login para continuar e acessar o dashboard FORD.</p>
+        </div>
+
+        <div *ngIf="errorMessage" class="alert alert-danger role-alert d-flex align-items-center mb-4 py-2 small rounded" role="alert">
+          <i class="bi bi-exclamation-triangle-fill me-2"></i>
+          <div>{{ errorMessage }}</div>
+        </div>
+
+        <form (ngSubmit)="executarLogin()" #loginForm="ngForm" novalidate>
+          
+          <div class="mb-3 input-group input-group-custom shadow-sm rounded-pill overflow-hidden">
+            <span class="input-group-text bg-white border-0 text-muted">
+              <i class="bi bi-person-fill"></i>
+            </span>
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              class="form-control border-0 ps-1 py-2"
+              placeholder="Insira seu usuário"
+              [(ngModel)]="nomeUsuario"
+              required>
+          </div>
+
+          <div class="mb-3 input-group input-group-custom shadow-sm rounded-pill overflow-hidden">
+            <span class="input-group-text bg-white border-0 text-muted">
+              <i class="bi bi-lock-fill"></i>
+            </span>
+            <input
+              type="password"
+              id="senha"
+              name="senha"
+              class="form-control border-0 ps-1 py-2"
+              placeholder="Insira sua senha"
+              [(ngModel)]="senhaUsuario"
+              required>
+          </div>
+
+          <div class="d-flex align-items-center justify-content-between mb-4 mt-2 px-1 small text-muted">
+            <label class="form-check-label d-flex align-items-center gap-2" for="rememberMe">
+              <input class="form-check-input ms-0 p-0" type="checkbox" id="rememberMe">
+              Logar automaticamente
+            </label>
+          </div>
+
+          <button
+            type="submit"
+            class="btn btn-ford-blue w-100 py-3 fw-bold text-white text-uppercase tracking-wider shadow-lg transition"
+            [disabled]="isLoading">
+            <span *ngIf="!isLoading">Entrar</span>
+            <span *ngIf="isLoading" class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+          </button>
+        </form>
+
+      </div>
+    </div>
+    
+  </div>
+</div>

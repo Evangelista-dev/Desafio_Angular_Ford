@@ -1,0 +1,112 @@
+.home-wrapper {
+  overflow: hidden;
+}
+
+.bg-image {
+  background-image: ('img/ranger.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: saturate(1.05);
+  transform: scale(1.02);
+  z-index: 0;
+}
+
+.bg-overlay {
+  background: linear-gradient(145deg, rgba(0, 44, 95, 0.9) 0%, rgba(20, 29, 49, 0.95) 100%);
+  z-index: 1;
+}
+
+.navbar-brand .logo-header {
+  height: 42px;
+}
+
+.welcome-card {
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, background-color 0.35s ease;
+  backdrop-filter: blur(18px);
+}
+
+.welcome-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.18) !important;
+}
+
+.icon-circle {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.09);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-primary {
+  color: #4da6ff !important;
+}
+
+.text-white-75 {
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+
+.stats-preview .stat-card {
+  transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+.stats-preview .stat-card:hover {
+  transform: translateY(-4px);
+  background-color: rgba(255, 255, 255, 0.14);
+}
+
+.btn-primary {
+  background-color: #0056b3;
+  border-color: #0056b3;
+  transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.btn-primary:hover {
+  background-color: #004494;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 767.98px) {
+  .welcome-card {
+    padding: 2.5rem 1.75rem;
+  }
+}
+
+.z-index-2 {
+  z-index: 2;
+}
+
+.welcome-card {
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.welcome-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 1rem 3rem rgba(0,0,0,.5) !important;
+}
+
+.text-primary {
+  color: #4da6ff !important; /* Azul mais claro para destacar no fundo escuro */
+}
+
+.btn-primary {
+  background-color: #0056b3;
+  border-color: #0056b3;
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #004494;
+  border-color: #004494;
+  transform: scale(1.02);
+}
+
+.tracking-wide {
+  letter-spacing: 1px;
+}

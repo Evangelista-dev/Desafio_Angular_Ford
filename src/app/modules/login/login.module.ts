@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms'; // Obrigatório para rodar o ngModel no Standalone
+import { FormsModule } from '@angular/forms'; 
 import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-login',
-  standalone: true, // Define como componente independente do Angular 19
-  imports: [CommonModule, FormsModule], // Importa as diretivas direto aqui
+  standalone: true, 
+  imports: [CommonModule, FormsModule], 
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
